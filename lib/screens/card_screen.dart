@@ -18,7 +18,7 @@ class CardScreen extends StatelessWidget {
 
           CustomCardType1(),
           SizedBox( height: 10, ),
-          CustomCardType2(),
+          CustomCardType2(name: 'hello', imageUrl: 'https://www.westend61.de/images/0000199595pw/canada-view-of-lake-in-tundra-landscape-at-tombstone-territorial-park-ESF000198.jpg',),
 
         ]
       ),
