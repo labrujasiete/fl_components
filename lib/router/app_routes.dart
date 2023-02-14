@@ -14,6 +14,8 @@ class AppRoutes {
     MenuOption(route: 'listview2', icon: Icons.list, name: 'List View 2', screen: const Listview2Screen()),
     MenuOption(route: 'alertscreen', icon: Icons.warning_amber, name: 'alert screen', screen: const AlertScreen()),
     MenuOption(route: 'cardscreen', icon: Icons.credit_card, name: 'cards screen', screen: const CardScreen()),
+    MenuOption(route: 'avatarscreen', icon: Icons.supervised_user_circle_rounded, name: 'Avatar Screen', screen: const AvatarScreen()),
+    MenuOption(route: 'animatedscreen', icon: Icons.filter_frames, name: 'Animated Screen', screen: const AnimatedScreen()),
 
   ];
   
