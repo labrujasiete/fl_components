@@ -1,3 +1,5 @@
+import 'dart:math' show Random;
+
 import 'package:fl_components/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +19,18 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
   BorderRadiusGeometry _borderRadius = BorderRadius.circular(20);
   
   void changeShape(){
-    print("object");
+
+    final random = Random();
+
+    _width = random.nextInt(300).toDouble() + 70;
+    _height = random.nextInt(300).toDouble() + 70;
+    _color = Color.fromRGBO(
+      random.nextInt(255), 
+      random.nextInt(255), 
+      random.nextInt(255), 
+      1
+      );
+    setState(() {});
   }
 
   @override
@@ -27,7 +40,9 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
         title: const Text('Animated Container'),
       ),
       body: Center(
-         child: Container(
+         child: AnimatedContainer(
+          duration: const Duration(milliseconds: 400),
+          curve: Curves.bounceOut,
           width: _width,
           height: _height,
           decoration: BoxDecoration(
